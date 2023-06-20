@@ -2,7 +2,7 @@
     include('conexao.php');
     
     $id = $_GET['id'];
-    $sql = "select * from fluxo_caixa where id = $id";
+    $sql = "SELECT * FROM fluxo_caixa WHERE id = $id";
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
 ?>
@@ -17,41 +17,36 @@
 <body> 
     <h1>Alterar</h1>
     <form action="altera_fluxo_caixa_exe.php" method="POST" enctype="multipart/form-data">
-    <input name ="id" type="hidden" value="<?php echo $row['id']?>">
+    <input name="id" type="hidden" value="<?php echo $row['id']?>">
     
     <div>
         <label for="data">Data</label>
-        <input type="date" name="data" value="('y-m-d')" id="data">
+        <input type="date" name="data" value="<?php echo $row['data']?>" id="data">
     </div>
-
-    
 
     <div>
         <label for="tipo">Tipo</label>
-        <input type="radio" id="entrada" name="tipo" value="entrada">
+        <input type="radio" id="entrada" name="tipo" value="entrada" <?php if ($row['tipo'] == 'entrada') echo 'checked'?>>
         <label for="entrada">Entrada</label>
-        <input type="radio" id="saida" name="tipo" value="saida">
+        <input type="radio" id="saida" name="tipo" value="saida" <?php if ($row['tipo'] == 'saida') echo 'checked'?>>
         <label for="saida">Saída</label>
     </div>
 
-    
-
     <div>
         <label for="valor">Valor</label>
-        <input type="number" name="valor" id="valor">
+        <input type="number" name="valor" id="valor" value="<?php echo $row['valor']?>">
     </div>
 
     <div>
         <label for="historico">Histórico</label>
-        <input type="text" name="historico" id="historico">
+        <input type="text" name="historico" id="historico" value="<?php echo $row['historico']?>">
     </div>
-
 
     <div>
         <label for="cheque">Cheque</label>
         <select name="cheque" id="cheque">
-            <option value="sim">Sim</option>
-            <option value="nao">Não</option>
+            <option value="sim" <?php if ($row['cheque'] == 'sim') echo 'selected'?>>Sim</option>
+            <option value="nao" <?php if ($row['cheque'] == 'nao') echo 'selected'?>>Não</option>
         </select>
     </div> 
 
