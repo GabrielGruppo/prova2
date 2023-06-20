@@ -15,12 +15,12 @@
     echo "<h1>Alteração de dados</h1>";
     
         $sql = "UPDATE fluxo_caixa SET
+            id='$id',
             data='$data',
             tipo='$tipo',
             valor='$valor',
             historico='$historico',
-            cheque='$cheque',
-
+            cheque='$cheque'
             WHERE id='$id'";
 
     echo $sql;

@@ -4,7 +4,7 @@
         
 
 
-
+    $id = $_POST['id'];
     $data = $_POST['data'];
     $tipo = $_POST['tipo'];
     $valor = $_POST['valor'];
@@ -12,9 +12,9 @@
     $cheque = $_POST['cheque'];
 
    
-    $sql = "INSERT INTO fluxo_caixa (data, tipo, valor, historico, cheque)";
+    $sql = "INSERT INTO fluxo_caixa (id, data, tipo, valor, historico, cheque)";
 
-    $sql .= " VALUES ('".$data."', '".$tipo."', '".$valor."', '".$historico."', '".$cheque."')";
+    $sql .= " VALUES ('".$id."','".$data."', '".$tipo."', '".$valor."', '".$historico."', '".$cheque."')";
 
     echo $sql. "<br>";
     $result = mysqli_query($con, $sql);
@@ -33,9 +33,9 @@
     echo "cheque: $cheque <br>";
 
 
-    $sql = "INSERT INTO fluxo_caixa (data, tipo, valor, historico, cheque)";
+    $sql = "INSERT INTO fluxo_caixa (id, data, tipo, valor, historico, cheque)";
 
-    $sql .= " VALUES ('".$data."', '".$tipo."', '".$valor."', '".$historico."', '".$cheque."')";
+    $sql .= " VALUES ('".$id."','".$data."', '".$tipo."', '".$valor."', '".$historico."', '".$cheque."')";
 
     echo $sql. "<br>";
     $result = mysqli_query($con, $sql);

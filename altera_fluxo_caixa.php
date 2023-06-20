@@ -1,7 +1,7 @@
 <?php 
     include('conexao.php');
     
-    $id_agenda = $_GET['id'];
+    $id = $_GET['id'];
     $sql = "select * from fluxo_caixa where id = $id";
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
