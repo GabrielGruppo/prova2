@@ -18,7 +18,7 @@
     <ul>
         <li><a href="cadastro_fluxo_caixa.html">Cadastrar</a></li>
         <li><a href="listar_fluxo_caixa.php">Listar</a></li>
-        <li><a href="consulta_fluxo_caixa.php">Consulta</a></li>
+        <li><a href="consulta_fluxo_caixa.html">Consulta</a></li>
     </ul>
 </body>
 </html>

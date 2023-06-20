@@ -1,7 +1,7 @@
 <?php 
     include('conexao.php');
     $id = $_GET['id'];
-    $sql = "delete from agenda where id = '$id'";
+    $sql = "delete from fluxo_caixa where id = '$id'";
 
     echo "<br>";
     $result = mysqli_query($con, $sql);
