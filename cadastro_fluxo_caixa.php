@@ -6,8 +6,7 @@
 
 
     $data = $_POST['data'];
-    $tipo = $_POST['entrada'];
-    $tipo = $_POST['saida'];
+    $tipo = $_POST['tipo'];
     $valor = $_POST['valor'];
     $historico = $_POST['historico'];
     $cheque = $_POST['cheque'];
